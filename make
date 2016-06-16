@@ -20,6 +20,9 @@ devCreate() {
 stagingCreate() {
 	devCreate;
 }
+testingCreate() {
+    devCreate
+}
 image() { echo "ERROR: target not supported" | color red bold; }
 local() { echo "ERROR: target not supported" | color red bold; }
 debug() { echo "ERROR: target not supported" | color red bold; }
