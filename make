@@ -11,7 +11,7 @@ export registry=registry.yimei180.com;
 # 重写mbt!!!!!
 mbt_rewrite;
 devCreate() {
-	if ! docker run -d --name $container_name --net aegis-bridge --ip $ip $image_name > /dev/null; then
+	if ! docker run -d --name $container_name --net aegis-bridge --ip $ip -p 6001:6379 $image_name > /dev/null; then
         echo "ERROR: 无法创建容器[$name][docker run -d --name $container_name --net aegis-bridge --ip $ip $image_name]" | color red bold;
         exit -1;
     fi
